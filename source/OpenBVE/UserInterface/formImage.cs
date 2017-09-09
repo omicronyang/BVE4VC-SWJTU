@@ -50,5 +50,9 @@ namespace OpenBve {
             } catch { }
         }
 
-    }
+		private void formImage_Load(object sender, EventArgs e)
+		{
+			this.Text = Interface.GetInterfaceString("program_title");
+		}
+	}
 }

@@ -27,7 +27,7 @@
             // 
             // formImage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96.0f, 96.0f);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(960, 600);
@@ -38,10 +38,10 @@
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            //this.Text = Interface.GetInterfaceString("program_title");
+            this.Load += new System.EventHandler(this.formImage_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.formImage_Paint);
-            this.Resize += new System.EventHandler(this.formImage_Resize);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.formImage_KeyDown);
+            this.Resize += new System.EventHandler(this.formImage_Resize);
             this.ResumeLayout(false);
 
         }

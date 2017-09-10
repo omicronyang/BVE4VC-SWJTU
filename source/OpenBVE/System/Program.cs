@@ -69,7 +69,8 @@ namespace OpenBve {
 			//ARM will generally only support OpenGL-ES
 			PortableExecutableKinds peKind;
 			typeof(object).Module.GetPEKind(out peKind, out CurrentCPUArchitecture);
-			
+
+
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			//--- determine the running environment ---
@@ -216,7 +217,6 @@ namespace OpenBve {
 			// --- show the main menu if necessary ---
 			if (result.RouteFile == null | result.TrainFolder == null) {
 				Joysticks.RefreshJoysticks();
-				
 				// end HACK //
 				result = formMain.ShowMainDialog(result);
 			} else {
@@ -227,10 +227,10 @@ namespace OpenBve {
 			// --- start the actual program ---
 			if (result.Start) {
 				if (Initialize()) {
-					#if !DEBUG
+#if !DEBUG
 					try {
-						#endif
-						MainLoop.StartLoopEx(result);
+#endif
+					MainLoop.StartLoopEx(result);
 						#if !DEBUG
 					} catch (Exception ex) {
 						bool found = false;
